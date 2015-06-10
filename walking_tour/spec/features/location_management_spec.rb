@@ -3,9 +3,9 @@ require 'rails_helper'
 describe 'adding locations' do
   
   it 'can add a location to a tour' do
-    visit '/tours'
-    click_link 'Science and the City'
-    click_link 'Add Location'
+    visit '/tours/4'
+    # click_link 'Science and the City'
+    click_on('Add Location')
 
     fill_in 'location[location_title]', with: 'Natural History Museum'
     fill_in 'location[location_address]', with: 'Cromwell Road, London SW7 5BD'

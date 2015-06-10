@@ -11,6 +11,7 @@ class ToursController < ApplicationController
   def create
     tour = Tour.new params[:tour].permit(:city, :subject, :tour_title, :tour_title_description, :tour_title_image)  
     if tour.save
+      flash[:notice] = "Post successfully created"
       redirect_to tour_path(tour)
       # tours_path 
     else
@@ -34,7 +35,7 @@ class ToursController < ApplicationController
 
   def update
     @tour = Tour.find(params[:id])
-    @tour.update(tour_params)
+    @tour.update(tours_params)
     redirect_to(tours_path)
   end
 

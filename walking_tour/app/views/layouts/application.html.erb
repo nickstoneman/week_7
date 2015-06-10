@@ -3,8 +3,12 @@
 <head>
   <title>WalkingTour</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag  'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' %>
   <%= csrf_meta_tags %>
+  
 </head>
 <body>
 <header>
@@ -12,9 +16,15 @@
     <li><%= link_to('Home', root_path) %></li>
     <li><%= link_to('Tours', tours_path) %></li>
     <li><%= link_to('New Tour', new_tour_path) %></li>
+    <li><%= link_to('Create User', new_user_path) %></li>
   </nav>
 </header>
 
+<% flash.each do |name, msg| %>
+  <div class="flash-message flash-message-<%= name %>">
+    <%= msg %>
+  </div>
+<% end %>
 
 <%= yield %>
 
