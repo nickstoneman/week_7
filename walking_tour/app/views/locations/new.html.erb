@@ -1,0 +1,16 @@
+<%= form_for [@tour, @location] do |form| %>
+  
+  <%= form.label :location_title %>
+  <%= form.text_field :location_title %>
+
+  <%= form.label :location_address %>
+  <%= form.text_field :location_address %>
+
+  <%= form.label :location_description %>
+  <%= form.text_field :location_description %>
+
+  <%= form.label :location_image %>
+  <%= form.text_field :location_image %>
+
+  <%= form.submit 'Add Location' %>
+<% end %>

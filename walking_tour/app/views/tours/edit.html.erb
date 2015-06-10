@@ -1,0 +1,18 @@
+<%= form_for @tour do |form| %>
+   <%= form.label :city %>
+   <%= form.text_field :city %>
+   
+   <%= form.label :subject %>
+   <%= form.text_field :subject %>
+   
+   <%= form.label :tour_title %>
+   <%= form.text_field :tour_title %>
+   
+   <%= form.label :tour_title_description %>
+   <%= form.text_field :tour_title_description %>
+   
+   <%= form.label :tour_title_image %>
+   <%= form.text_field :tour_title_image %>
+ 
+ <%= form.submit 'Save' %>
+<% end %>

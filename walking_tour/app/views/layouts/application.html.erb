@@ -7,6 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <nav>
+    <li><%= link_to('Home', root_path) %></li>
+    <li><%= link_to('Tours', tours_path) %></li>
+    <li><%= link_to('New Tour', new_tour_path) %></li>
+  </nav>
+</header>
+
 
 <%= yield %>
 

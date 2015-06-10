@@ -1,4 +1,8 @@
 class Tour < ActiveRecord::Base
+  belongs_to :user
+  has_many :locations
+  belongs_to :category
+
   validates :city, presence: true
   validates :subject, presence: true
   validates :tour_title, presence: true

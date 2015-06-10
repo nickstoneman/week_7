@@ -1,4 +1,6 @@
 class Location < ActiveRecord::Base
+  belongs_to :tour
+
   validates :location_title, presence: true
   validates :location_address, presence: true
   validates :location_description, presence: true

@@ -1,0 +1,7 @@
+<% @tours.each do |tour| %>
+  <div class="tour-edit-delete">
+    <p><%= link_to tour.tour_title, tour_path(tour) %></p>
+    <p><%= link_to('EDIT', edit_tour_path(tour.id)) %></p>
+    <p><%= link_to('DELETE', tour_path(tour.id), method: :delete) %></p>
+  </div>
+<% end %>
