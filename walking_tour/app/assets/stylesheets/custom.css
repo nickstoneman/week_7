@@ -7,6 +7,11 @@
   background-image: url('http://d.ibtimes.co.uk/en/full/1379872/early-morning-view-trafalgar-square-thames-london-eye-background.jpg');
   /*http://alliedlondon.com/wp-content/uploads/2014/02/london-slide.jpg*/
   /*http://d.ibtimes.co.uk/en/full/1379872/early-morning-view-trafalgar-square-thames-london-eye-background.jpg*/
+  text-align: center;
+}
+
+body {
+  padding-top: 70px;
 }
 
 media="screen"
