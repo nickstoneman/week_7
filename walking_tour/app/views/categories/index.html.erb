@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Categories</h1>
+
+  <% @categories.each do |category| %>
+      <%= category.category %>
+      <% category.tours.each do |tour| %>
+          <%= tour.tour_title %>
+       <% end %>
+  <% end %>
+</div>

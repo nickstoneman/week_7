@@ -1,0 +1,19 @@
+<div class="container">
+  <%= form_for @user do |form| %>
+
+     <%= form.label :name %>
+     <%= form.text_field :name %>
+     
+     <%= form.label :url %>
+     <%= form.text_field :url %>
+     
+     <%= form.label :picture %>
+     <%= form.text_field :picture %>
+     
+     <%= form.label :bio %>
+     <%= form.text_field :bio %>
+   
+   <%= form.submit 'Save' %>
+
+  <% end %>
+</div>

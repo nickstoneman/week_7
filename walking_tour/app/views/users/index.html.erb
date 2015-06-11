@@ -1,7 +1,16 @@
-  <% @users.each do |user| %>
-   <div class="tour-edit-delete">
-   <%= user.name %>
+<div class="container">
+
+   <% @users.each do |user| %>
+     <div class="user-edit-delete">
+      <p><%= link_to user.name, user_path(user) %></p>
+       <p><%= image_tag(user.picture, width: 100) %> -- <%= user.name %> -- <%= user.bio %> View Blog: <%= user.url %> <%= link_to('EDIT', edit_user_path(user.id)) %> <%= link_to('DELETE', user_path(user.id), method: :delete) %></p>
+     </div>
   <% end %>
 
+   <hr>
+
+   <%= link_to('Create New User', new_user_path) %>
+
+ </div>
 
 

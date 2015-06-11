@@ -2,31 +2,41 @@
 <html>
 <head>
   <title>WalkingTour</title>
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag  'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
+  <link rel="stylesheet" type="text/css" href="stylesheets/custom.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' %>
   <%= csrf_meta_tags %>
   
 </head>
-<body>
-<header>
-  <nav>
-    <li><%= link_to('Home', root_path) %></li>
-    <li><%= link_to('Tours', tours_path) %></li>
-    <li><%= link_to('New Tour', new_tour_path) %></li>
-    <li><%= link_to('Create User', new_user_path) %></li>
-  </nav>
-</header>
+  <body>
+    <div class="container">
+      <header class="page-header">
+          <ul class="nav nav-pills pull-right">
+            <li class="active"><%= link_to('Home', root_path) %></li>
+            <li><%= link_to('Tours', tours_path) %></li>
+            <li><%= link_to('Users', users_path) %></li>
+            <li><%= link_to('Categories', categories_path) %></li>
+          </ul>
+        <h3>City Walks</h3>
+      </header>
+    </div>
 
-<% flash.each do |name, msg| %>
-  <div class="flash-message flash-message-<%= name %>">
-    <%= msg %>
-  </div>
-<% end %>
-
-<%= yield %>
-
-</body>
+  <% flash.each do |name, msg| %>
+    <div class="flash-message flash-message-<%= name %>">
+      <%= msg %>
+    </div>
+  <% end %>
+ 
+  <%= yield %>
+  
+  <div class="container">
+      <div>
+        <p>&copy; 2015 City Walks - By WDI Productions Inc.</p>
+      </div>
+    </div>
+  </body>
 </html>

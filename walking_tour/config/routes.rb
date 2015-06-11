@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   resources :tours do
     resources :locations
     resources :users
+    resources :categories
   end
 
   resources :users
+  resources :categories
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

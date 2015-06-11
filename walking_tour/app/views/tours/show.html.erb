@@ -1,18 +1,20 @@
-<h1><%= @tour.tour_title %></h1>
-  <%= image_tag(@tour.tour_title_image, width: 200) %>
-  
-  <p><%= @tour.city %></p>
-  <p><%= @tour.subject %></p>
-  <p><%= @tour.tour_title_description %></p>
-  <p><%= @tour.tour_title_image %></p>
+<div class="container">
+  <h1><%= @tour.tour_title %></h1>
+    <%= image_tag(@tour.tour_title_image, width: 200) %>
+    
+    <p><%= @tour.city %></p>
+    <p><%= @tour.subject %></p>
+    <p><%= @tour.tour_title_description %></p>
+    <p><%= @tour.tour_title_image %></p>
 
 
-<%= link_to 'Add Location', new_tour_location_path(@tour) %>
+  <%= link_to 'Add Location', new_tour_location_path(@tour) %>
 
-<% @tour.locations.each do |location| %>
-  <p>location was added <%= time_ago_in_words(location.created_at) %> ago</p>
-  <h2><%= location.location_title %></h2>
-  <p><%= location.location_address %></p>
-  <p><%= location.location_description %></p>
-  <%= image_tag(location.location_image, width: 200) %>
-<% end %>
+  <% @tour.locations.each do |location| %>
+    <p>location was added <%= time_ago_in_words(location.created_at) %> ago</p>
+    <h2><%= location.location_title %></h2>
+    <p><%= location.location_address %></p>
+    <p><%= location.location_description %></p>
+    <%= image_tag(location.location_image, width: 200) %>
+  <% end %>
+</div>

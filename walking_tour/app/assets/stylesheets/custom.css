@@ -1,0 +1,15 @@
+.nav-pills > li.active > a {
+  color: #fff;
+  background-color: #F18D8B !important;
+}
+
+.jumbotron {
+  background-image: url('http://d.ibtimes.co.uk/en/full/1379872/early-morning-view-trafalgar-square-thames-london-eye-background.jpg');
+  /*http://alliedlondon.com/wp-content/uploads/2014/02/london-slide.jpg*/
+  /*http://d.ibtimes.co.uk/en/full/1379872/early-morning-view-trafalgar-square-thames-london-eye-background.jpg*/
+}
+
+media="screen"
+.btn-group-lg>.btn, .btn-lg {
+  border-radius: none !important;
+}
