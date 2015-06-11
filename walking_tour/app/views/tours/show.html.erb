@@ -16,7 +16,7 @@
 <div class="container">
   <div class="col-md-8">  
     <% @tour.locations.each do |location| %>
-      <p>location was added <%= time_ago_in_words(location.created_at) %> ago</p>
+      <!-- <p>location was added <%= time_ago_in_words(location.created_at) %> ago</p> -->
       <h2><%= location.location_title %></h2>
       <h4><%= location.location_address %></h4>
       <p><%= location.location_description %></p>
@@ -24,7 +24,7 @@
   </div>
   <div class="col-md-4">
     <% @tour.locations.each do |location| %>  
-    <%= image_tag(location.location_image, width: 200) %>
+    <%= image_tag(location.location_image, width: 250) %>
     <% end %>
   </div>
 </div>
