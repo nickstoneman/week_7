@@ -1,27 +1,28 @@
 <div class="container">
-   <%= form_for @tour do |form| %>
-
-      <%= form.label :city %>
+   <%= bootstrap_form_for @tour do |form| %>
+      <div class="panel-body">
+      <% form.label :city %>
       <%= form.text_field :city %>
       
-      <%= form.label :subject %>
+      <% form.label :subject %>
       <%= form.text_field :subject %>
       
-      <%= form.label :tour_title %>
+      <% form.label :tour_title %>
       <%= form.text_field :tour_title %>
       
-      <%= form.label :tour_title_description %>
+      <% form.label :tour_title_description %>
       <%= form.text_field :tour_title_description %>
       
-      <%= form.label :tour_title_image %>
+      <% form.label :tour_title_image %>
       <%= form.text_field :tour_title_image %>
 
-      <%= form.label :category %>
-      <%= form.text_field :category %>
+
 
       <%= collection_select(:tour, :category_id, Category.all, :id, :category, prompt: true) %>
 
+      <%= form.submit 'Save', class: 'btn btn-default' %>
+      </div>
 
-    <%= form.submit 'Save' %>
    <% end %>
 </div>
+
